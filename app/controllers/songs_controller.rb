@@ -3,11 +3,7 @@ require 'rack-flash'
 class SongsController < ApplicationController
   use Rack::Flash
 
-  get '/songs/:slug' do
-    @song=Song.find_by_slug(params[:slug])
-    #@genres=@song.genres
-    erb :'/songs/show'
-  end
+
 
   get '/songs/new' do
     #binding.pry
