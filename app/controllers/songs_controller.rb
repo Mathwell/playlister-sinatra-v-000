@@ -9,7 +9,7 @@ class SongsController < ApplicationController
     #binding.pry
     @artists=Artist.all
     @genres=Genre.all
-    erb  :'/songs/new'
+    erb  :'songs/new'
   end
 
   get '/songs' do
@@ -54,7 +54,7 @@ class SongsController < ApplicationController
     #@song.genre_ids = params[:genres]
     @song.save
     flash[:message] = "Successfully updated song."
-    redirect to "/songs/#{@song.slug}"
+    redirect to "songs/#{@song.slug}"
   end
 
 
