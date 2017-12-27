@@ -36,6 +36,7 @@ class SongsController < ApplicationController
     puts @song
 
     flash[:message] = "Successfully created song."
+    @@message="Successfully created song."
 
     #binding.pry
     #puts @song.slug
